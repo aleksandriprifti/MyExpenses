@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useLayoutEffect } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import IconButton from "../components/UI/IconButton";
@@ -19,6 +20,24 @@ const ManageExpense = ({ route, navigation }) => {
 
   const cancelExpenseHandler = () => {};
   const confirmExpenseHandler = () => {};
+=======
+import { View, Text, StyleSheet } from "react-native";
+import React, { useLayoutEffect } from "react";
+
+const ManageExpense = ({ route, navigation }) => {
+  // use ? in case the expense is undefined
+  const editedExpenseId = route.params?.expenseId;
+  const isEditing = !!editedExpenseId;
+
+  useLayoutEffect(
+    () =>
+      navigation.setOptions({
+        title: isEditing ? "Edit Expense" : "Add Expense",
+      }),
+    [navigation, isEditing]
+  );
+
+>>>>>>> 37b0cd0b090424f7bc388922b8cdf328df8e1531
   return (
     <View style={styles.container}>
       <View>
@@ -45,6 +64,7 @@ const ManageExpense = ({ route, navigation }) => {
 
 export default ManageExpense;
 
+<<<<<<< HEAD
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -59,3 +79,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+=======
+const styles = StyleSheet.create({});
+>>>>>>> 37b0cd0b090424f7bc388922b8cdf328df8e1531
