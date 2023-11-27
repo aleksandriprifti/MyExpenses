@@ -8,7 +8,7 @@ const COLORS = {
   primary800: "#200364",
   accent500: "#2F5061",
   error50: "#fcc4e4",
-  error500: "#F4EAE6",
+  error500: "red",
   gray500: "#39324a",
   gray700: "#221c30",
 };
